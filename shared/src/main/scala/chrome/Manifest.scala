@@ -42,7 +42,7 @@ case class PageAction(
     popup: Option[String] = None
 )
 
-case class ContentScript(matches: List[String], css: List[String], js: List[String])
+case class ContentScript(matches: List[String], css: List[String], js: List[String], run_at: Option[String] = None)
 
 case class Bluetooth(
     uuids: List[String] = Nil,
