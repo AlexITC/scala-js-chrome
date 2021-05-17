@@ -35,7 +35,7 @@ lazy val bindings = project
   .settings(commonSettings: _*)
   .settings(
     name := "scala-js-chrome",
-    crossScalaVersions := Seq("2.12.13", "2.13.1"),
+    crossScalaVersions := Seq("2.12.10", "2.13.6"),
     libraryDependencies ++= Seq(
       "org.scala-js" %%% "scalajs-dom" % "1.1.0"
     ),
@@ -54,12 +54,12 @@ lazy val plugin = project
     libraryDependencies ++= {
       // NOTE: Avoid circe as it doesn't respect binary compatibility which causes lots of issues
       Seq(
-        "com.lihaoyi" %%% "upickle" % "1.2.3",
+        "com.lihaoyi" %%% "upickle" % "1.3.14",
         "org.scalactic" %% "scalactic" % "3.1.1" % "test",
-        "org.scalatest" %% "scalatest" % "3.2.4" % "test"
+        "org.scalatest" %% "scalatest" % "3.2.9" % "test"
       )
     },
-    addSbtPlugin("org.scala-js" % "sbt-scalajs" % "1.5.0"),
+    addSbtPlugin("org.scala-js" % "sbt-scalajs" % "1.5.1"),
     addSbtPlugin("org.scala-js" % "sbt-jsdependencies" % "1.0.0")
   )
   .enablePlugins(commonPlugins: _*)
